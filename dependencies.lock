@@ -1,8 +1,32 @@
 dependencies:
+  espressif/esp32-camera:
+    component_hash: ac4228c825b891378bc0806869170d4ebc5d45ba8ebc519b4f8886a56ad2d123
+    dependencies:
+    - name: espressif/esp_jpeg
+      registry_url: https://components.espressif.com
+      require: public
+      version: ^1.3.1
+    - name: idf
+      require: private
+      version: '>=5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.1.5
+  espressif/esp_jpeg:
+    component_hash: defb83669293cbf86d0fa86b475ba5517aceed04ed70db435388c151ab37b5d7
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.1
   idf:
     source:
       type: idf
-    version: 5.4.0
+    version: 5.4.3
   jbrilha/esp_lcd_st7789:
     component_hash: 95b5a7ed16de15546d37d5ab4abce3b1d8b9ed418ec8b6d06ac8890f082e4188
     dependencies: []
@@ -11,8 +35,9 @@ dependencies:
       type: service
     version: 1.0.2
 direct_dependencies:
+- espressif/esp32-camera
 - idf
 - jbrilha/esp_lcd_st7789
-manifest_hash: ea1024278b053ff0c94e7b77b28ef329c65f38abc22e6c7121695f509f5b9e57
+manifest_hash: c19375d9567ddc417357c303868510950ea4c8d882eed7f27ea980bea19ad4cd
 target: esp32
 version: 2.0.0
